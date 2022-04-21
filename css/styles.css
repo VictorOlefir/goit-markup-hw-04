@@ -116,6 +116,8 @@ img {
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  display: flex;
+  align-items: baseline;
 }
 .nav-li:not(:last-child) {
   margin-right: 50px;
@@ -136,7 +138,6 @@ img {
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
-  vertical-align: middle;
   display: flex;
 }
 .header-item:hover,
@@ -322,6 +323,12 @@ img {
 .staff-soc-link:hover .staff-soc-icon {
   fill: #ffffff;
 }
+.staff-soc-link:focus {
+  background-color: var(--active-color);
+}
+.staff-soc-link:focus .staff-soc-icon {
+  fill: #ffffff;
+}
 .staff-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -341,9 +348,12 @@ img {
 .regular-list {
   display: flex;
 }
-.regular-list-item {
-  /* outline: 1px solid red;
-  background: aqua; */
+
+.regular-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
   width: 170px;
   border-style: solid;
   border-width: 1px;
@@ -351,13 +361,18 @@ img {
   border-radius: 4px;
 }
 .regular-icon {
-  margin: 10px 32px 10px 32px;
   fill: #afb1b8;
 }
-.regular-list-item:hover {
+.regular-link:hover {
   border-color: var(--active-color);
 }
-.regular-list-item:hover .regular-icon {
+.regular-link:hover .regular-icon {
+  fill: var(--active-color);
+}
+.regular-link:focus {
+  border-color: var(--active-color);
+}
+.regular-link:focus .regular-icon {
   fill: var(--active-color);
 }
 .regular-list-item:not(:last-child) {
@@ -365,12 +380,14 @@ img {
 }
 
 /*==========================++++++FOOTER++++++==========================*/
-.footer .container {
-  width: 1600px;
+.footer {
   background-color: var(--bg-hero-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-left: 215px;
+}
+.footer .container {
+  display: flex;
+  align-items: baseline;
 }
 .footer-logo {
   font-family: "Raleway";
@@ -424,7 +441,6 @@ img {
   color: var(--bg-white-color);
   text-transform: uppercase;
   margin-bottom: 20px;
-  margin-top: 9px;
 }
 .footer-big-li {
   margin-left: 70px;
@@ -452,6 +468,12 @@ img {
   background-color: var(--active-color);
 }
 .footer-soc-link:hover .footer-soc-icon {
+  fill: #ffffff;
+}
+.footer-soc-link:focus {
+  background-color: var(--active-color);
+}
+.footer-soc-link:focus .footer-soc-icon {
   fill: #ffffff;
 }
 /*==========================++++++PORTFOLIO++++++==========================*/
@@ -483,6 +505,12 @@ img {
   margin-right: 8px;
 }
 .portfolio-btn:hover {
+  background-color: var(--active-color);
+  color: var(--bg-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.portfolio-btn:focus {
   background-color: var(--active-color);
   color: var(--bg-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -523,6 +551,14 @@ img {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+}
+.portfolio-link:hover {
+  display: block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.portfolio-link:focus {
+  display: block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .active-link {
   color: var(--active-color);
